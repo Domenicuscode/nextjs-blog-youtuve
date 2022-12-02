@@ -1,13 +1,15 @@
-import Head from 'next/head';
 import styles from '../styles/layout.module.css';
-import Image from 'next/image';
 import utilStyles from '../styles/utils.module.css';
+
+import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const name = 'Manuel';
+export const siteTitle = "Mi sitio web con next.js";
 
 export default function Layout({ children, title, description, home }) {
-    console.log(home);
+    //console.log(home);
     return (
         <div className={styles.container}>
             <Head>
@@ -24,7 +26,7 @@ export default function Layout({ children, title, description, home }) {
                             className={utilStyles.borderCircle}
                             height={144}
                             width={144}
-                            alt=""
+                            alt={name}
                         />
                         <h1 className={utilStyles.heading2Xl}>{name}</h1>
                     </>
@@ -37,7 +39,7 @@ export default function Layout({ children, title, description, home }) {
                                 className={utilStyles.borderCircle}
                                 height={108}
                                 width={108}
-                                alt=""
+                                alt={name}
                             />
                         </Link>
                         <h2 className={utilStyles.headingLg}>

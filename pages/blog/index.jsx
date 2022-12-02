@@ -1,9 +1,12 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 import Link from "next/link";
 
 export default function index({ data }) {
   return (
-    <Layout>
+    <Layout
+    title="Lista de post escritos por mi"
+    description="descripcion de posts"
+    >
       <h1>Lista de Post</h1>
       {data.map(({ id, title, body }) => (
         <div key={id}>
